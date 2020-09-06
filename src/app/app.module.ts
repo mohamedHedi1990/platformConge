@@ -9,20 +9,26 @@ import {ButtonModule} from 'primeng/button';
 import { ListCongesComponent } from './list-conges/list-conges.component';
 import { MenuComponent } from './menu/menu.component';
 import { HorizontalMenuComponent } from './horizontal-menu/horizontal-menu.component';
+import { ListeAvanceSalaireComponent } from './liste-avance-salaire/liste-avance-salaire.component';
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
     ListUsersComponent,
     ListCongesComponent,
     MenuComponent,
-    HorizontalMenuComponent
+    HorizontalMenuComponent,
+    ListeAvanceSalaireComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TableModule,
     BrowserAnimationsModule,
-    ButtonModule
+    ButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

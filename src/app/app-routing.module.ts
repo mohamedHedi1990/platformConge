@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {ListUsersComponent} from './list-users/list-users.component';
 import { ListCongesComponent } from './list-conges/list-conges.component';
+import {ListeAvanceSalaireComponent} from './liste-avance-salaire/liste-avance-salaire.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
-  {path: '', component: ListUsersComponent},
+  {path: '', component: LoginComponent},
   {path: 'utilisateurs', component: ListUsersComponent},
   {path: 'conges', component: ListCongesComponent},
+  {path: 'avances-salaire', component: ListeAvanceSalaireComponent},
 ];
 
 @NgModule({
