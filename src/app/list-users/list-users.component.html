@@ -8,53 +8,54 @@
         <div class="p-d-flex p-ai-center p-jc-between" style="width: 60%">
         <span class="p-input-icon-left" style="width: 100%">
                     <i class="pi pi-search"></i>
-                    <input pInputText type="text" style="margin-left: 5%; width: 93%;"(input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Chercher un utilisateur par nom, prénom, matricule, email ou date de création" />
+                    <input pInputText class="searchInput, p-inputtext" type="text" style="margin-left: 5%; width: 93%;"(input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Chercher un utilisateur par nom, prénom, matricule, email ou date de création" />
                 </span>
         </div>
-        <div style="width:8%; margin-left: 32%">
-          <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2" (click)="openNew()"></button>
+        <div style="width: 24%;
+    margin-left: 21%;">
+          <button pButton pRipple label="Nouveau utilisateur" icon="pi pi-plus" class="p-button-success p-mr-2" (click)="openNew()"></button>
         </div>
       </div>
 
     </ng-template>
     <ng-template pTemplate="header">
-      <tr>
+      <tr style="text-align: center">
         <th style="width: 8rem"></th>
-        <th pSortableColumn="name">Nom</th>
-        <th pSortableColumn="pernom">Prénom </th>
-        <th pSortableColumn="matricule">Matricule </th>
-        <th pSortableColumn="email" style="width: 200px">Email </th>
-        <th pSortableColumn="creationDate">Date de création </th>
-        <th pSortableColumn="status">Statut</th>
+        <th pSortableColumn="name" style="text-align: center">Nom</th>
+        <th pSortableColumn="pernom" style="text-align: center">Prénom </th>
+        <th pSortableColumn="matricule" style="text-align: center; width: 150px">Matricule </th>
+        <th pSortableColumn="email" style="width: 200px;text-align: center; width: 130px">Email </th>
+        <th pSortableColumn="creationDate" style="text-align: center; width: 150px">Date de création </th>
+        <th pSortableColumn="status" style="text-align: center">Statut</th>
         <th style="width: 10rem"></th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-user>
-      <tr class="p-selectable-row">
-        <td>
+      <tr class="p-selectable-row" style="text-align: center">
+        <td style="text-align: center">
           <img [alt]="user.nom" src="assets/images/avatar/{{user.pictureTitle}}" width="32" style="vertical-align: middle" class="roundedImage"/>
         </td>
-        <td>
+        <td style="text-align: center">
           {{user.nom}}
         </td>
-        <td>
+        <td style="text-align: center">
           {{user.pernom}}
         </td>
-        <td>
+        <td style="text-align: center">
           {{user.matricule}}
         </td>
-        <td>
+        <td style="text-align: center">
           {{user.email}}
         </td>
-        <td>
+        <td style="text-align: center">
           {{user.creationDate}}
         </td>
-        <td>
+        <td style="text-align: center">
           <span *ngIf="user.status === 'ACTIVE'" class="customer-badge status-active">Active</span>
           <span *ngIf="user.status === 'BLOCKED'" class="customer-badge status-blocked">Bloqué</span>
           <span *ngIf="user.status === 'IN_PROGRESS'" class="customer-badge status-progress">En cours</span>
         </td>
-        <td>
+        <td style="text-align: center">
           <div style="display: flex;">
             <button pButton pRipple class="p-button-rounded p-button-info p-mr-2" [icon]="user.status === 'BLOCKED' ? 'pi pi-unlock' : 'pi pi-lock'" data-toggle="modal" style="margin-right: 7px;"(click)="1"
                     placement="top">

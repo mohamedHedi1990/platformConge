@@ -7,11 +7,15 @@ import { ListUsersComponent } from './list-users/list-users.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ButtonModule} from 'primeng/button';
 import { ListCongesComponent } from './list-conges/list-conges.component';
+import { MenuComponent } from './menu/menu.component';
+import { HorizontalMenuComponent } from './horizontal-menu/horizontal-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
     ListUsersComponent,
-    ListCongesComponent
+    ListCongesComponent,
+    MenuComponent,
+    HorizontalMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { ListCongesComponent } from './list-conges/list-conges.component';
 
 const routes: Routes = [
   {path: '', component: ListUsersComponent},
+  {path: 'utilisateurs', component: ListUsersComponent},
   {path: 'conges', component: ListCongesComponent},
 ];
 
