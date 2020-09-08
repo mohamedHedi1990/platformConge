@@ -1,0 +1,71 @@
+<h5>Nouveau demande de congé</h5>
+<div style="width: 70%;
+    text-align: center;
+    margin: auto;">
+<form [formGroup]="requestForm">
+  <div class="p-grid p-fluid">
+    <div class="p-col-12 p-md-4">
+      <label for="demandeCongeType" class="p-float-label">Type de congé</label>
+      <div class="p-inputgroup">
+        <!--
+        <div *ngIf="demandeCongeType.errors.required" style="color: red">
+          Merci de sélectionner un type de congé.
+        </div>
+        -->
+        <span class="p-inputgroup-addon"><i class="pi pi-check"></i></span>
+        <select class="form-control" id="demandeCongeType" formControlName="demandeCongeType">
+          <option [ngValue]="null">-- Type de congé --</option>
+          <option ngValue="ANNUAL_HOLIDAY">-- Vacance annuaire --</option>
+          <option ngValue="SICK">-- Maladie --</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-4">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+        <p-calendar pInputText placeholder="Date de début" dateFormat="dd-mm-yy"formControlName="dateDeb" class="inputCalendar">
+        </p-calendar>
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-4">
+      <div class="p-inputgroup">
+        <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+        <p-calendar pInputText placeholder="Date de fin" formControlName="dateFin" class="inputCalendar">
+        </p-calendar>
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-4">
+      <div class="p-inputgroup">
+        <!--
+        <div *ngIf="remplacantId.errors.required" style="color: red">
+          Merci de sélectionner votre remplaçant.
+        </div>
+        -->
+        <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+        <select class="form-control" name="line" formControlName="remplacantId">
+          <option [ngValue]="null">-- Remplaçant --</option>
+          <option *ngFor="let u of users;">{{u.pernom}} {{u.nom}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="p-col-12 p-md-4">
+      <div class="p-inputgroup">
+        <!--
+        <div *ngIf="remplacantId.errors.required" style="color: red">
+          Merci de saisir les taches à délequer pour votre remplaçant.
+        </div>
+        -->
+        <span class="p-inputgroup-addon"><i class="pi pi-list"></i></span>
+        <textarea id="story" name="story" rows="3"  pInputText placeholder="Taches à faire" [formControl]="tacheDele" style="width: 100%;"></textarea>
+      </div>
+    </div>
+    <button type="submit" [disabled]="" class="btn btn-primary" style="margin-left: 87%;
+    background-color: darkorange;
+    border: darkorange;">Envoyer</button>
+  </div>
+</form>
+</div>

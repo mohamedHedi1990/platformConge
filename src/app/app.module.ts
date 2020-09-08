@@ -11,7 +11,9 @@ import { MenuComponent } from './menu/menu.component';
 import { HorizontalMenuComponent } from './horizontal-menu/horizontal-menu.component';
 import { ListeAvanceSalaireComponent } from './liste-avance-salaire/liste-avance-salaire.component';
 import { LoginComponent } from './login/login.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { NewDemandeCongeComponent } from './new-demande-conge/new-demande-conge.component';
+import {CalendarModule} from "primeng";
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import {FormsModule} from "@angular/forms";
     MenuComponent,
     HorizontalMenuComponent,
     ListeAvanceSalaireComponent,
-    LoginComponent
+    LoginComponent,
+    NewDemandeCongeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,9 @@ import {FormsModule} from "@angular/forms";
     TableModule,
     BrowserAnimationsModule,
     ButtonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

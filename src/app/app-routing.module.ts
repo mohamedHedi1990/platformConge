@@ -4,12 +4,14 @@ import {ListUsersComponent} from './list-users/list-users.component';
 import { ListCongesComponent } from './list-conges/list-conges.component';
 import {ListeAvanceSalaireComponent} from './liste-avance-salaire/liste-avance-salaire.component';
 import {LoginComponent} from './login/login.component';
+import {NewDemandeCongeComponent} from './new-demande-conge/new-demande-conge.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'utilisateurs', component: ListUsersComponent},
   {path: 'conges', component: ListCongesComponent},
   {path: 'avances-salaire', component: ListeAvanceSalaireComponent},
+  {path: 'nouveau-demande-conge', component: NewDemandeCongeComponent},
 ];
 
 @NgModule({
