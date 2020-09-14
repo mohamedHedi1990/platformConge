@@ -14,6 +14,8 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NewDemandeCongeComponent } from './new-demande-conge/new-demande-conge.component';
 import {CalendarModule} from "primeng";
+import { ListeFraisComponent } from './liste-frais/liste-frais.component';
+import { AddNewUserComponent } from './add-new-user/add-new-user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import {CalendarModule} from "primeng";
     HorizontalMenuComponent,
     ListeAvanceSalaireComponent,
     LoginComponent,
-    NewDemandeCongeComponent
+    NewDemandeCongeComponent,
+    ListeFraisComponent,
+    AddNewUserComponent
   ],
   imports: [
     BrowserModule,

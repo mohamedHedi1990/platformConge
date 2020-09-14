@@ -1,0 +1,96 @@
+<h5>Nouveau utilisateur</h5>
+<input type="button" id="loadFile" class="btn btn-secondary"  value="Saisir une image pour votre utilisateur" onclick="document.getElementById('file').click();" style="margin-bottom: 2%;border: darkorange; background-color: darkorange"/>
+<input id="file" #file type="file" accept='image/*' (change)="preview(file.files)" style="display: none" />
+<div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+      <span>
+        <img *ngIf="imgURL" class="user-picture image ng-star-inserted" [src]="imgURL" style="width: 150px; height: 150px; cursor: move; border-radius: 30px;">
+        <img *ngIf="!imgURL && user.userPictureUrl && user.userPictureUrl !== '' " class="user-picture image ng-star-inserted"
+             [src]="sanitizer.bypassSecurityTrustResourceUrl(user.userPictureUrl)" style="width: 150px; height: 150px; cursor: move; border-radius: 30px;">
+
+      </span>
+</div>
+<div style="width: 90%;margin: auto;">
+  <div class="p-grid p-fluid">
+    <div style="display: flex">
+      <div class="mb-1 col-md-6 col-12 p-field">
+        <label for="n" class="p-float-label">Nom</label>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+          <input type="text" class="form-control p-field" id="n"
+                 [(ngModel)]="user.nom" [ngClass]="{
+        'is-invalid': user.nom == null || user.nom== '' ,
+        'is-valid':user.nom != null && user.nom != ''
+      }">
+        </div>
+      </div>
+      <div class="mb-1 col-md-6 col-12">
+        <label for="p" class="p-float-label">Prénom</label>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+          <input type="text" class="form-control p-field" id="p"
+                 [(ngModel)]="user.pernom" [ngClass]="{
+        'is-invalid': user.pernom == null || user.pernom== '' ,
+        'is-valid':user.pernom != null && user.pernom != ''
+      }">
+        </div>
+      </div>
+    </div>
+    <div style="display: flex">
+      <div class="mb-1 col-md-6 col-12 p-field">
+        <label for="m" class="p-float-label">Matricule</label>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+          <input type="text" class="form-control p-field" id="m"
+                 [(ngModel)]="user.matricule"[ngClass]="{
+        'is-invalid': user.matricule == null || user.matricule== '' ,
+        'is-valid':user.matricule != null && user.matricule != ''
+      }">
+        </div>
+      </div>
+      <div class="mb-1 col-md-6 col-12 p-field">
+        <label for="mp" class="p-float-label">Mot de passe</label>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+          <input type="text" class="form-control p-field" id="mp"
+                 [(ngModel)]="user.password" [ngClass]="{
+        'is-invalid': user.password == null || user.password== '' ,
+        'is-valid':user.password != null && user.password != ''
+      }">
+        </div>
+      </div>
+    </div>
+    <div style="display: flex">
+      <div class="mb-1 col-md-6 col-12 p-field">
+        <label for="nt" class="p-float-label">Numéro de télephone</label>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+          <input type="number" class="form-control p-field" id="nt"
+                 [(ngModel)]="user.phone" [ngClass]="{
+        'is-invalid': user.phone == null ,
+        'is-valid': user.phone != null
+      }">
+        </div>
+      </div>
+      <div class="mb-1 col-md-6 col-12 p-field">
+        <label for="e" class="p-float-label">Email</label>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-tag"></i></span>
+          <input type="text" class="form-control p-field" id="e"
+                 [(ngModel)]="user.email" >
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <div class="p-panel p-panel-header" style="margin-top: 20px;">
+    <button [disabled]="" class="btn btn-secondary" style="margin-left: 1%;">Annuler</button>
+    <button  [disabled]="" class="btn btn-success" style="margin-left: 74%;background-color: darkorange; border: darkorange;" >Enregistrer</button>
+  </div>
+
+
+</div>
+
