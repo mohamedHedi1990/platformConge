@@ -30,60 +30,58 @@
 </div>
 -->
 <div class="col s12 white">
-  <div class="bg"></div>
-  <div>
-    <div class="app flex-row align-items-center">
+    <div class="bg"></div>
+    <div>
+        <div class="app flex-row align-items-center">
 
-      <div>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="card-group " style="display: block !important;">
-              <div style="text-align: center; margin-bottom: 10%;
+            <div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card-group " style="display: block !important;">
+                            <div style="text-align: center; margin-bottom: 10%;
     margin-top: 15%;">
-                <img class="brand-img" src="../../assets/images/logo.png" alt="SMART UP" style="width: 45%;">
+                                <img class="brand-img" src="../../assets/images/logo.png" alt="SMART UP" style="width: 45%;">
 
-              </div>
-              <div class="card p-4">
-                <div class="card-body" style="text-align: center;">
-                  <!--
+                            </div>
+                            <div class="card p-4">
+                                <div class="card-body" style="text-align: center;">
+                                    <!--
                   <h1 style="font-size: 21px;">Platform de gestion des demandes des employés</h1>
                   -->
-                  <p class="text-muted">Se connecter à votre compte</p>
-                  <div *ngIf="isLoginError" class="error red-text center error-message" style="color: red">
-                    <b class="material-icons">ERREUR: </b>Login ou mot de passe incorrect
-                  </div>
+                                    <p class="text-muted">Se connecter à votre compte</p>
+                                    <div *ngIf="isLoginError" class="error red-text center error-message" style="color: red">
+                                        <b class="material-icons">ERREUR: </b>Login ou mot de passe incorrect
+                                    </div>
 
-                </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                      <span class="input-group-text">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
                         <i class="pi pi-user"></i>
                       </span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Matricule" #Username
-                         [(ngModel)]="user.matriculeUtilisateur" name="username" required>
-                </div>
-                <div class="input-group mb-4">
-                  <div class="input-group-prepend">
-                      <span class="input-group-text">
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Matricule" #Username [(ngModel)]="user.matriculeUtilisateur" name="username" required>
+                                </div>
+                                <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
                         <i class="pi pi-lock"></i>
                       </span>
-                  </div>
-                  <input type="password" class="form-control" placeholder="Mot de passe" #Password
-                         [(ngModel)]="user.passwordUtilisateur" name="password" required>
-                </div>
-                <div class="row" style="margin-left: 77%;">
-                  <div class="col-6">
-                    <button type="button"  class="btn btn-primary px-4" style="border: darkorange;
-    background-color: darkorange;">Connecter</button>
-                  </div>
-                  <!-- <div class="col-6 text-right">
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="Mot de passe" #Password [(ngModel)]="user.passwordUtilisateur" name="password" required>
+                                </div>
+                                <div class="row" style="margin-left: 77%;">
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-primary px-4" style="border: darkorange;
+    background-color: darkorange;" click="login()">Connecter</button>
+                                    </div>
+                                    <!-- <div class="col-6 text-right">
                     <button type="button" class="btn btn-link px-0">Forgot password?</button>
                   </div> -->
-                </div>
-              </div>
-            </div>
-            <!-- <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
           <div class="card-body text-center">
             <div>
               <h2>Sign up</h2>
@@ -92,9 +90,9 @@
             </div>
           </div>
         </div> -->
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
